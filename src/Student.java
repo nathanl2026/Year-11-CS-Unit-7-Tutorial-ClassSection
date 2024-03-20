@@ -7,13 +7,14 @@ public class Student {
     private int age;
     private int yearLevel;
     private static int studentCount;
-    public ArrayList<String> test = new ArrayList<>();
+    public ArrayList<String> test;
 
     public Student (String firstName, String lastName, int age, int yearLevel) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.yearLevel = yearLevel;
+        this.test = new ArrayList<>();
     }
     public int getId(){
         return id;
@@ -49,5 +50,6 @@ public class Student {
         return (this == student );
     }
     public String toString(){
+        return "Student{id=" + getId() + ", firstName='" + getFirstName() + "', lastName='" + getLastName() + "', age=" + getAge() + ", yearLevel=" + getYearLevel() + "}";
     }
 }
